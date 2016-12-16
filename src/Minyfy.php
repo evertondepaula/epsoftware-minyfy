@@ -7,7 +7,7 @@ use Exception;
 
 class Minyfy
 {
-	public function static html($input) {
+	static public function html($input) {
 		try {
 		    if(trim($input) === "") return $input;
 		    // Remove extra white-space(s) between HTML attribute(s)
@@ -58,7 +58,7 @@ class Minyfy
 	    }
 	}
 
-	public function static css($input) {
+	static public function css($input) {
 		try {
 		    if(trim($input) === "") return $input;
 		    return preg_replace(
@@ -105,7 +105,7 @@ class Minyfy
 		}
 	}
 
-	public function static js($input) {
+	static public function js($input) {
 		try {
 		    if(trim($input) === "") return $input;
 		    return preg_replace(
